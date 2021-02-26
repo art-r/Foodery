@@ -1,3 +1,3 @@
 # HackathonSolution
 
-Das ist ein Test
+Test
