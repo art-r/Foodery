@@ -1,9 +1,9 @@
 # **SMEAT - SMART EAT**
-## Slogan der Solution
+## *(Slogan)*
 ***
 ## Beschreibung
-*==> Kurzbeschreibung der Solution und Präsentation mit den Schlüsselbotschaften*\
-*==> Solution / Prototyp Link / Dokumentation / Beschreibung*
+*(==> Kurzbeschreibung der Solution und Präsentation mit den Schlüsselbotschaften)*\
+*(==> Solution / Prototyp Link / Dokumentation / Beschreibung)*
 
 ***
 ### Teilnehmer:
