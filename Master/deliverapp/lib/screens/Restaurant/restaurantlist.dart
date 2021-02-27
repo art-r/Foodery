@@ -45,7 +45,7 @@ class _RestaurantListState extends State<RestaurantList> {
       ),
       floatingActionButton: FloatingActionButton(
         child: Center(
-            child: Text('New order',
+            child: Text('+',
                 textAlign: TextAlign.center, style: TextStyle(fontSize: 25.0))),
         onPressed: () {
           showModalBottomSheet(
