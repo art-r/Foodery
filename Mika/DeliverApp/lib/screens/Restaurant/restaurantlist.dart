@@ -1,3 +1,6 @@
+
+import 'package:DeliverApp/data/auftragdata.dart';
+import 'package:DeliverApp/models/models.dart';
 import 'package:flutter/material.dart';
 
 //stellt die aktuellen aufträge für das jeweilige restaurant dar -> ListViewBuilder, fast gleich wie lieferantlist
@@ -8,6 +11,9 @@ class RestaurantList extends StatefulWidget {
 }
 
 class _RestaurantListState extends State<RestaurantList> {
+  String txt1 = "";
+  String txt2 = "";
+  String txt3 = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,14 +44,17 @@ class _RestaurantListState extends State<RestaurantList> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         Text(
-                          'Order:',
+                          'Ordernumber:',
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 30),
                         ),
                           TextField(
+                            onChanged: (String scr){
+                              txt1 = scr;
+                            },
                             decoration: InputDecoration(
                             border: OutlineInputBorder(),
-                            labelText: 'Order'),
+                            labelText: 'Ordernumber...'),
                         ),
                         Text(
                           'Target:',
@@ -53,9 +62,12 @@ class _RestaurantListState extends State<RestaurantList> {
                           style: TextStyle(fontSize: 30),
                         ),
                         TextField(
+                          onChanged: (String scr){
+                              txt2 = scr;
+                            },
                             decoration: InputDecoration(
                             border: OutlineInputBorder(),
-                            labelText: 'Target')
+                            labelText: 'Target...')
                         ),
                         Text(
                           'Time:',
@@ -63,12 +75,17 @@ class _RestaurantListState extends State<RestaurantList> {
                           style: TextStyle(fontSize: 30),
                         ),
                         TextField(
+                            onChanged: (String scr){
+                              txt3 = scr;
+                            },
                             decoration: InputDecoration(
                             border: OutlineInputBorder(),
-                            labelText: 'Time')
+                            labelText: 'Time...')
                         ),
                         FlatButton.icon(
                           onPressed: () {
+                            Order currentOrder = Order(deliveryman: "Antonio",targetLocation: txt2, pickuptime: txt3);
+                            testOrders.add(currentOrder);
                             Navigator.of(context).maybePop();
                           },
                           icon: Icon(Icons.food_bank_outlined),
