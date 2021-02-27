@@ -1,6 +1,5 @@
-import 'package:deliverapp/data/auftragData.dart';
 import 'package:flutter/material.dart';
-import 'package:deliverapp/models/models.dart';
+import 'package:deliverapp/models/listbuilder1.dart';
 
 //stellt die aktuellen aufträge für das jeweilige restaurant dar -> ListViewBuilder, fast gleich wie lieferantlist
 
@@ -17,103 +16,39 @@ class _RestaurantListState extends State<RestaurantList> {
   final TextStyle text = TextStyle(
     fontSize: 20,
   );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 0.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: 25.0),
-            Text(
-              'Open Orders',
-              style: TextStyle(fontSize: 30),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20.0),
+              child: Text(
+                'Open Orders',
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
             ),
             Expanded(
-              child: ListView(
-                children: testOrders.map((order) {
-                  return Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        FlatButton.icon(
-                          onPressed: () {},
-                          icon: Icon(Icons.food_bank_rounded),
-                          label: Text(''),
-                          height: 10.0,
-                        ),
-                        Column(children: <Widget>[
-                          SizedBox(height: 10.0),
-                          Row(
-                            children: [
-                              Text(
-                                'pick up at: ',
-                                style: text,
-                              ),
-                              Text(
-                                order.pickuptime,
-                                style: data,
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 10.0),
-                          Row(children: [
-                            Text(
-                              'ordernumber: ',
-                              style: text,
-                            ),
-                            Text(
-                              order.ordernumber,
-                              style: data,
-                            ),
-                          ]),
-                          SizedBox(height: 10.0),
-                          Row(
-                            children: [
-                              Text(
-                                'pick up location: ',
-                                style: text,
-                              ),
-                              Text(
-                                order.pickupLocation,
-                                style: data,
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 10.0),
-                          Row(children: [
-                            Text(
-                              'deliveryman: ',
-                              style: text,
-                            ),
-                            Text(
-                              order.deliveryman,
-                              style: data,
-                            )
-                          ]),
-                          SizedBox(height: 10.0),
-                        ]),
-                      ],
-                    ),
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [Colors.purple, Colors.red],
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                      ),
-                      boxShadow: [
-                        BoxShadow(),],
-                      borderRadius: BorderRadius.all(Radius.circular(24)),
-                    ),
-                  );
-                }).toList(),
-              ),
-            )
+              child: restaurantListBuilder(context),
+            ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        child: Center(
+            child: Text(
+          'New order',
+          textAlign: TextAlign.center,
+        )),
         onPressed: () {
           showModalBottomSheet(
               context: context,
@@ -128,27 +63,40 @@ class _RestaurantListState extends State<RestaurantList> {
                         topRight: Radius.circular(20.00),
                       )),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Text(
-                        'Auftrag planen',
+                        'Order:',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 30),
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(), labelText: 'Order'),
                       ),
                       Text(
-                        'Ziel',
+                        'Target:',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 30),
                       ),
+                      TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Target')),
                       Text(
-                        'Uhrzeit',
+                        'Time:',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 30),
                       ),
+                      TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(), labelText: 'Time')),
                       FlatButton.icon(
-                        onPressed: () {},
-                        icon: Icon(Icons.access_alarm),
-                        label: Text('abschicken'),
+                        onPressed: () {
+                          Navigator.of(context).maybePop();
+                        },
+                        icon: Icon(Icons.food_bank_outlined),
+                        label: Text('finish'),
                         color: Colors.grey,
                         splashColor: Colors.blueGrey,
                       )

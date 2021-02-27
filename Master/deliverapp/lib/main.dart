@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:deliverapp/screens/Lieferant/lieferantlist.dart';
 import 'package:deliverapp/screens/Restaurant/restaurantlist.dart';
@@ -17,11 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Hackathon',
       routes: {
-        '/': (context) => RestaurantList(),
+        '/': (context) => Startup(),
         '/lieferant': (context) => LieferantList(),
         '/restaurant': (context) => RestaurantList(),
       },
     );
   }
 }
-
