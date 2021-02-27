@@ -33,6 +33,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_snake_navigationbar: ^0.4.4
+  flutter_map:
 
 
 
