@@ -51,6 +51,14 @@ class _LieferantListState extends State<LieferantList> {
                         style: TextStyle(fontSize: 30),
                       ),
                       MyStatefulWidget(), //DropDownButton, siehe Class unten
+                      Text(
+                        'Time:',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 30),
+                      ),
+                      TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(), labelText: 'Time')),
                       FlatButton.icon(
                         onPressed: () {
                           Navigator.of(context).maybePop();
