@@ -12,10 +12,14 @@ class _RestaurantListState extends State<RestaurantList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Aufträge'),
+        title: Text('Pending Orders'),
+        centerTitle: true,
       ),
-      body: Container(child: Text('Test')),
+      body: Container(
+        child: Text('Test')
+        ),
       floatingActionButton: FloatingActionButton(
+        child: Center(child: Text('New order')),
         onPressed: () {
           showModalBottomSheet(
               context: context,
@@ -29,33 +33,50 @@ class _RestaurantListState extends State<RestaurantList> {
                         topLeft: Radius.circular(20.0),
                         topRight: Radius.circular(20.00),
                       )),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        'Auftrag planen',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30),
-                      ),
-                      Text(
-                        'Ziel',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30),
-                      ),
-                      Text(
-                        'Uhrzeit',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30),
-                      ),
-                      FlatButton.icon(
-                        onPressed: () {},
-                        icon: Icon(Icons.access_alarm),
-                        label: Text('abschicken'),
-                        color: Colors.grey,
-                        splashColor: Colors.blueGrey,
-                      )
-                    ],
-                  ),
+                      child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Text(
+                          'Order:',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 30),
+                        ),
+                          TextField(
+                            decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Order'),
+                        ),
+                        Text(
+                          'Target:',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 30),
+                        ),
+                        TextField(
+                            decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Target')
+                        ),
+                        Text(
+                          'Time:',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 30),
+                        ),
+                        TextField(
+                            decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Time')
+                        ),
+                        FlatButton.icon(
+                          onPressed: () {
+                            Navigator.of(context).maybePop();
+                          },
+                          icon: Icon(Icons.food_bank_outlined),
+                          label: Text('finish'),
+                          color: Colors.grey,
+                          splashColor: Colors.blueGrey,
+                        )
+                      ],
+                    ),
                 );
               });
         },
