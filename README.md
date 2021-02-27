@@ -6,4 +6,10 @@
 *(==> Solution / Prototyp Link / Dokumentation / Beschreibung)*
 
 ***
-### Teilnehmer:
+### Teilnehmer (Team M06):
+Gabriel R.
+Antonio H.
+Felix S.
+Luka V.
+Artur R.
+Mika H.
