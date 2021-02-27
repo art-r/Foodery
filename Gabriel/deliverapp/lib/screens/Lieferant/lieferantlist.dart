@@ -50,52 +50,12 @@ class _LieferantListState extends State<LieferantList> {
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 30),
                       ),
-                      TextField(
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Enter number')),
-
-//                            @override
-//                           Widget build(BuildContext context) {
-//                             return DropdownButton<String>(
-//                             value: dropdownValue,
-//                             icon: Icon(Icons.arrow_downward),
-//                             iconSize: 24,
-//                             elevation: 16,
-//                             style: TextStyle(color: Colors.deepPurple),
-//                             underline: Container(
-//                             height: 2,
-//                             color: Colors.deepPurpleAccent,
-//                             ),
-//                             onChanged: (String newValue) {
-//                             setState(() {
-//                             dropdownValue = newValue;
-//                             });
-//                             },
-//                             items: <String>['One', 'Two', 'Three','Four','Five']
-//                             .map<DropdownMenuItem<String>>((String value) {
-//                             return DropdownMenuItem<String>(
-//                             value: value,
-//                             child: Text(value),
-//                             );
-//                             }).toList(),
-//                             );
-//   }
-// }
-
-                      Text(
-                        'Time:',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30),
-                      ),
-                      TextField(
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(), labelText: 'Time')),
+                      MyStatefulWidget(), //DropDownButton, siehe Class unten
                       FlatButton.icon(
                         onPressed: () {
                           Navigator.of(context).maybePop();
                         },
-                        icon: Icon(Icons.food_bank_outlined),
+                        icon: Icon(Icons.delivery_dining),
                         label: Text('finish'),
                         color: Colors.grey,
                         splashColor: Colors.blueGrey,
@@ -107,6 +67,61 @@ class _LieferantListState extends State<LieferantList> {
         },
         tooltip: 'increment',
       ),
+    );
+  }
+}
+
+class MyApp extends StatelessWidget {
+  static const String _title = 'Flutter Code Sample';
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: _title,
+      home: Scaffold(
+        appBar: AppBar(title: const Text(_title)),
+        body: Center(
+          child: MyStatefulWidget(),
+        ),
+      ),
+    );
+  }
+}
+
+class MyStatefulWidget extends StatefulWidget {
+  MyStatefulWidget({Key key}) : super(key: key);
+
+  @override
+  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
+}
+
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  String dropdownValue = 'One';
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButton<String>(
+      value: dropdownValue,
+      icon: Icon(Icons.arrow_downward),
+      iconSize: 24,
+      elevation: 16,
+      style: TextStyle(color: Colors.blueGrey),
+      underline: Container(
+        height: 2,
+        color: Colors.blueGrey,
+      ),
+      onChanged: (String newValue) {
+        setState(() {
+          dropdownValue = newValue;
+        });
+      },
+      items: <String>['One', 'Two', 'Three', 'Four', 'Five']
+          .map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
     );
   }
 }
