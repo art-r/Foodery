@@ -1,3 +1,4 @@
+import 'package:deliverapp/models/listbuilder2.dart';
 import 'package:flutter/material.dart';
 
 //stellt die aktuellen aufträge für das jeweilige restaurant dar -> ListViewBuilder, fast gleich wie lieferantlist
@@ -8,14 +9,38 @@ class LieferantList extends StatefulWidget {
 }
 
 class _LieferantListState extends State<LieferantList> {
+  final TextStyle data = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 20,
+  );
+  final TextStyle text = TextStyle(
+    fontSize: 20,
+  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Active deliveries'),
-        centerTitle: true,
+      backgroundColor: Colors.white,
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 0.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20.0),
+              child: Text(
+                'Open Orders',
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            Expanded(
+              child: lieferantListBuilder(context),
+            ),
+          ],
+        ),
       ),
-      body: Container(child: Text('Test')),
       floatingActionButton: FloatingActionButton(
         child: Center(
             child: Text('+',
@@ -33,42 +58,46 @@ class _LieferantListState extends State<LieferantList> {
                         topLeft: Radius.circular(20.0),
                         topRight: Radius.circular(20.00),
                       )),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Text(
-                        'Enter destination:',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30),
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(), labelText: 'Target'),
-                      ),
-                      Text(
-                        'Maximum number of reroutings:',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30),
-                      ),
-                      MyStatefulWidget(), //DropDownButton, siehe Class unten
-                      Text(
-                        'Time:',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30),
-                      ),
-                      TextField(
+                  child: Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        Text(
+                          'Enter destination:',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 30),
+                        ),
+                        TextField(
                           decoration: InputDecoration(
-                              border: OutlineInputBorder(), labelText: 'Time')),
-                      FlatButton.icon(
-                        onPressed: () {
-                          Navigator.of(context).maybePop();
-                        },
-                        icon: Icon(Icons.delivery_dining),
-                        label: Text('finish'),
-                        color: Colors.grey,
-                        splashColor: Colors.blueGrey,
-                      )
-                    ],
+                              border: OutlineInputBorder(),
+                              labelText: 'Target'),
+                        ),
+                        Text(
+                          'Maximum number of reroutings:',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 30),
+                        ),
+                        MyStatefulWidget(),
+                        Text(
+                          'Time:',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 30),
+                        ),
+                        TextField(
+                            decoration: InputDecoration(
+                                border: OutlineInputBorder(),
+                                labelText: 'Time')),
+                        FlatButton.icon(
+                          onPressed: () {
+                            Navigator.of(context).maybePop();
+                          },
+                          icon: Icon(Icons.food_bank_outlined),
+                          label: Text('finish'),
+                          color: Colors.grey,
+                          splashColor: Colors.blueGrey,
+                        )
+                      ],
+                    ),
                   ),
                 );
               });
@@ -104,7 +133,7 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  String dropdownValue = 'One';
+  String dropdownValue = 'one';
 
   @override
   Widget build(BuildContext context) {
@@ -113,6 +142,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       icon: Icon(Icons.arrow_downward),
       iconSize: 24,
       elevation: 16,
+      isExpanded: true,
       style: TextStyle(color: Colors.blueGrey),
       underline: Container(
         height: 2,
@@ -123,7 +153,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           dropdownValue = newValue;
         });
       },
-      items: <String>['One', 'Two', 'Three', 'Four', 'Five']
+      items: <String>['one', 'two', 'three', 'four', 'five']
           .map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,
