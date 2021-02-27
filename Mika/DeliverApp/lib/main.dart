@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Hackathon',
       routes: {
-        '/': (context) => LieferantList(),
+        '/': (context) => RestaurantList(),
         '/lieferant': (context) => LieferantList(),
         '/restaurant': (context) => RestaurantList(),
       },
