@@ -8,20 +8,29 @@ class Startup extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text('Choose your role: '),
+          Text(
+            'Choose your role: ',
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(height: 25.0),
           FlatButton.icon(
+              height: 50.0,
               onPressed: () {
                 Navigator.pushNamed(context, '/lieferant');
               },
-              icon: Icon(Icons.delivery_dining),
+              icon: Icon(Icons.delivery_dining, size: 40.0),
               label: Text('Deliverer')),
+          SizedBox(height: 10.0),
           FlatButton.icon(
+              height: 50.0,
               onPressed: () {
                 Navigator.pushNamed(context, '/restaurant');
               },
-              icon: Icon(Icons.food_bank),
-              label: Text('Restaurant'))
+              icon: Icon(Icons.food_bank, size: 40.0),
+              label: Text('Restaurant')),
         ],
       ),
     );
