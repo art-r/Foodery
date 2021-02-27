@@ -78,10 +78,6 @@ class _LieferantListState extends State<LieferantList> {
                           style: TextStyle(fontSize: 30),
                         ),
                         MyStatefulWidget(),
-                        TextField(
-                            decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                labelText: 'Enter number')),
                         Text(
                           'Time:',
                           textAlign: TextAlign.center,
