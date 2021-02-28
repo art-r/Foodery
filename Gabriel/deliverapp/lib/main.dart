@@ -1,4 +1,5 @@
-
+import 'package:deliverapp/screens/Restaurant/orderCreation.dart';
+import 'package:deliverapp/screens/Lieferant/routecreation.dart';
 import 'package:flutter/material.dart';
 import 'package:deliverapp/screens/Lieferant/lieferantlist.dart';
 import 'package:deliverapp/screens/Restaurant/restaurantlist.dart';
@@ -18,10 +19,11 @@ class MyApp extends StatelessWidget {
       title: 'Hackathon',
       routes: {
         '/': (context) => Startup(),
+        '/orderCreate': (context) => OrderCreation(),
+        '/routeCreate': (context) => RouteCreation(),
         '/lieferant': (context) => LieferantList(),
         '/restaurant': (context) => RestaurantList(),
       },
     );
   }
 }
-
