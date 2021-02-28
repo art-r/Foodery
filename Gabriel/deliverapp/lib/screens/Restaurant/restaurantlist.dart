@@ -50,7 +50,7 @@ class _RestaurantListState extends State<RestaurantList> {
         onPressed: () {
           Navigator.pushNamed(context, '/orderCreate');
         },
-        tooltip: 'increment',
+        tooltip: 'add order',
       ),
     );
   }
