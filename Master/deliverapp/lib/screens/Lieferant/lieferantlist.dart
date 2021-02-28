@@ -28,7 +28,7 @@ class _LieferantListState extends State<LieferantList> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 20.0),
               child: Text(
-                'Open Orders',
+                'Orders',
                 style: TextStyle(
                   fontSize: 30,
                   color: Colors.black,

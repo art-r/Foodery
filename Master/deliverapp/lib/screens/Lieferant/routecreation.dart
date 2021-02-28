@@ -36,7 +36,7 @@ class RouteCreation extends StatelessWidget {
                         borderSide:
                             BorderSide(color: Colors.grey[400], width: 2.5),
                         borderRadius: BorderRadius.circular(10.0)),
-                    labelText: 'pick-up time',
+                    labelText: 'destination',
                   )),
               Text(
                 'Maximum number of reroutings:',
@@ -45,7 +45,7 @@ class RouteCreation extends StatelessWidget {
               ),
               MyStatefulWidget(),
               Text(
-                'Time:',
+                'maximum time added by rerouting:',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 30),
               ),
@@ -58,7 +58,7 @@ class RouteCreation extends StatelessWidget {
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey[400], width: 2.5),
                     borderRadius: BorderRadius.circular(10.0)),
-                labelText: 'pick-up time',
+                labelText: '(in minutes)',
               )),
               FlatButton.icon(
                 padding: EdgeInsets.fromLTRB(20.0, 8.0, 20.0, 8.0),
