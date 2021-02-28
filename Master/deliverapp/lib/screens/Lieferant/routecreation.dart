@@ -47,8 +47,10 @@ class RouteCreation extends StatelessWidget {
               FlatButton.icon(
                 onPressed: () {
                   MapsLauncher.launchQuery(temptargetlocation);
-
-                  Navigator.of(context).maybePop();
+                  Future.delayed(const Duration(seconds: 5), () {
+                    Navigator.of(context).maybePop();
+                    Navigator.pushNamed(context, '/accept');
+                  });
                 },
                 icon: Icon(Icons.food_bank_outlined),
                 label: Text('Start'),

@@ -9,6 +9,7 @@ class Order {
   String deliveryman;
   String targetLocation;
   String pickupLocation;
+  String addedtime;
 
   Order({
     this.gradientColor,
@@ -17,5 +18,6 @@ class Order {
     this.deliveryman,
     this.pickupLocation,
     this.targetLocation,
+    this.addedtime,
   });
 }

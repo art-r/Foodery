@@ -25,6 +25,8 @@ dependencies:
   flutter:
     sdk: flutter
   maps_launcher: ^1.2.2+2
+  workmanager:
+  flutter_local_notifications:
 
 
 
