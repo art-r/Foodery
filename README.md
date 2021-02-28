@@ -13,7 +13,7 @@ So können Privatpersonen das Essen auf ihrer Route mitnehmen und dabei ohne gro
 Das Restaurant spart sich so einen eigenen Fahrer und muss keine eigene Lieferflotte aufbauen!\
 *Foodery bekommt dabei lediglich eine kleine Provision von 10% von den Verkaufskosten für die Vermittlung.*\
 Dank 5G können dabei:
-- Restaurants in Echtzeit verfolgen, wo die ihre Lieferung gerade ist (Daten werden dabei nicht gespeichert nur live übertragen!)
+- Restaurants in Echtzeit verfolgen, wo die ihre Lieferung gerade ist (Daten werden dabei nicht gespeichert - nur live übertragen!)
 - Die Fahrer sofort Updates bekommen unterwegs (per Sprachsteuerung - don't drive and use your handy ;) wenn eine neue potentielle Lieferung für ihre Route verfügbar ist
 - Der Endkunde live verfolgen wo sein Essen ist (falls das Restaurant den Standort der Lieferung per Einstellung freigegeben hat)
 \
