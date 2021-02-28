@@ -82,7 +82,7 @@ class _RestaurantListState extends State<RestaurantList> {
                               border: OutlineInputBorder(),
                               labelText: 'Target')),
                       Text(
-                        'Time:',
+                        'Ideal pickup time:',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 30),
                       ),
