@@ -78,11 +78,11 @@ Widget lieferantListBuilder(BuildContext context) {
                     SizedBox(height: 10.0),
                     Row(children: [
                       Text(
-                        'deliveryman: ',
+                        'target: ',
                         style: text,
                       ),
                       Text(
-                        order.deliveryman,
+                        order.targetLocation,
                         style: data,
                       )
                     ]),
