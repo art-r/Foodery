@@ -51,15 +51,15 @@ class OrderCreation extends StatelessWidget {
                   temptargetlocation = scr;
                 },
                 decoration: InputDecoration(
-                    focusColor: Colors.blueGrey[700],
-                    hoverColor: Colors.blueGrey[700],
-                    focusedBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(color: Colors.blueGrey[800], width: 2.5),
-                        borderRadius: BorderRadius.circular(10.0)),
-                    border: OutlineInputBorder(),
-                    labelText: 'target location',
-                    labelStyle: text)),
+                  focusColor: Colors.blueGrey[700],
+                  hoverColor: Colors.blueGrey[700],
+                  focusedBorder: OutlineInputBorder(
+                      borderSide:
+                          BorderSide(color: Colors.blueGrey[800], width: 2.5),
+                      borderRadius: BorderRadius.circular(10.0)),
+                  border: OutlineInputBorder(),
+                  labelText: 'target location',
+                )),
             SizedBox(height: 20),
             Text(
               'pick-up time:',

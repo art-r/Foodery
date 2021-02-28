@@ -19,7 +19,7 @@
     
         android:name="io.flutter.app.FlutterApplication"
         android:label="deliverapp"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@drawable/logo.png">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

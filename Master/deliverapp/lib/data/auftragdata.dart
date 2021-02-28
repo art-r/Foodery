@@ -13,7 +13,7 @@ List<Order> testOrders = [
   Order(
       deliveryman: 'Gabriel',
       ordernumber: '2',
-      pickupLocation: 'Stuttgart, Rotebühlplatz 41/1',
+      pickupLocation: 'Stuttgart, Rotebühlplatz',
       pickuptime: '17:45h',
       gradientColor: GradientColor.sky),
   Order(
