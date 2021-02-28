@@ -1,5 +1,5 @@
 # **Foodery**
-## *Deliver food the smart and friendly way*
+## *Deliver food the smart and sustainable way*
 ***
 ## Beschreibung:
 ### ***Was?***
