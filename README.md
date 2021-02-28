@@ -18,9 +18,11 @@ Dank 5G können dabei:
 - Der Endkunde live verfolgen wo sein Essen ist (falls das Restaurant den Standort der Lieferung per Einstellung freigegeben hat)
 ## **==> So profitieren alle: Fahrer, Restaurant und die Umwelt**
 ***
-**Prototyp (APK):** {Link zu APK}\
-SourceCode: {Link zu Folder}
-
+**Prototyp:** [Link zu APK](https://github.com/art-r/HackathonSolution/blob/main/foodery.apk)\
+SourceCode: [Link zu Folder](https://github.com/art-r/HackathonSolution/tree/main/Master/deliverapp)
+***
+**Some Impressions:**\
+![Startbildschirm Screenshot](/relative/path/to/img.jpg?raw=true "Startbildschirm")
 ***
 ### Teilnehmer (Team M06):
 Gabriel R. - Antonio H. - Felix S. - Luka V. - Artur R. - Mika H.
