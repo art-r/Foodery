@@ -16,7 +16,6 @@ Dank 5G können dabei:
 - Restaurants in Echtzeit verfolgen, wo die ihre Lieferung gerade ist (Daten werden dabei nicht gespeichert - nur live übertragen!)
 - Die Fahrer sofort Updates bekommen unterwegs (per Sprachsteuerung - don't drive and use your handy ;) wenn eine neue potentielle Lieferung für ihre Route verfügbar ist
 - Der Endkunde live verfolgen wo sein Essen ist (falls das Restaurant den Standort der Lieferung per Einstellung freigegeben hat)
-\
 ## **==> So profitieren alle: Fahrer, Restaurant und die Umwelt**
 ***
 **Prototyp (APK):** {Link zu APK}\
