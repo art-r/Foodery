@@ -21,8 +21,15 @@ Dank 5G können dabei:
 **Prototyp:** [Link zu APK](https://github.com/art-r/HackathonSolution/blob/main/foodery.apk)\
 SourceCode: [Link zu Folder](https://github.com/art-r/HackathonSolution/tree/main/Master/deliverapp)
 ***
-**Some Impressions:**\
-![Startbildschirm Screenshot](/relative/path/to/img.jpg?raw=true "Startbildschirm")
+## **Impressionen:**
+**Startbildschirm:**
+![Startbildschirm Screenshot](/screenshots/MainScreen.png "Startbildschirm")
+**Rolle Deliverer:**
+![Deliverer](/screenshots/DelivererScreen.png "Deliverer")
+**Rolle Restaurant:**
+![Restaurant](/screenshots/RestaurantScreen.png "Restaurant")
+**Rolle Restaurant - Offene Requests:**
+![Restaurant Open Orders](/screenshots/OpenOrdersScreen.png "Restaurant Open Orders")
 ***
 ### Teilnehmer (Team M06):
 Gabriel R. - Antonio H. - Felix S. - Luka V. - Artur R. - Mika H.
