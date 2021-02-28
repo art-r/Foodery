@@ -18,8 +18,8 @@ Dank 5G können dabei:
 - Der Endkunde live verfolgen wo sein Essen ist (falls das Restaurant den Standort der Lieferung per Einstellung freigegeben hat)
 ## **==> So profitieren alle: Fahrer, Restaurant und die Umwelt**
 ***
-**Prototyp:** [Link zu APK](https://github.com/art-r/HackathonSolution/blob/main/foodery.apk)\
-SourceCode: [Link zu Folder](https://github.com/art-r/HackathonSolution/tree/main/Master/deliverapp)
+**Prototyp:** [Link zu APK](https://github.com/art-r/Foodery/blob/main/foodery-arm64-v8a-release.apk)\
+SourceCode: [Link zu Folder](https://github.com/art-r/Foodery/tree/main/Master/deliverapp)
 ***
 ## **Impressionen:**
 **Startbildschirm:**
