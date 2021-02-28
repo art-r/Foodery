@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:maps_launcher/maps_launcher.dart';
 
 class RouteCreation extends StatelessWidget {
+  String temptargetlocation;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +24,9 @@ class RouteCreation extends StatelessWidget {
                 style: TextStyle(fontSize: 30),
               ),
               TextField(
+                onChanged: (String scr) {
+                  temptargetlocation = scr;
+                },
                 decoration: InputDecoration(
                     border: OutlineInputBorder(), labelText: 'Target'),
               ),
@@ -41,10 +46,12 @@ class RouteCreation extends StatelessWidget {
                       border: OutlineInputBorder(), labelText: 'Time')),
               FlatButton.icon(
                 onPressed: () {
+                  MapsLauncher.launchQuery(temptargetlocation);
+
                   Navigator.of(context).maybePop();
                 },
                 icon: Icon(Icons.food_bank_outlined),
-                label: Text('finish'),
+                label: Text('Start'),
                 color: Colors.grey,
                 splashColor: Colors.blueGrey,
               )

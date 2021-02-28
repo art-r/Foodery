@@ -42,13 +42,13 @@ class _LieferantListState extends State<LieferantList> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-          child: Center(
-              child: Text('+',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 25.0))),
-          onPressed: () {
-            Navigator.push(context, '/routeCreate'),
-          }),
+        child: Center(
+            child: Text('+',
+                textAlign: TextAlign.center, style: TextStyle(fontSize: 25.0))),
+        onPressed: () {
+          Navigator.pushNamed(context, '/routeCreate');
+        },
+      ),
     );
   }
 }
