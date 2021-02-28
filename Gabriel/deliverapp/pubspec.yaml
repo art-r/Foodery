@@ -21,8 +21,13 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+
   flutter:
     sdk: flutter
+  maps_launcher: ^1.2.2+2
+  workmanager:
+  flutter_local_notifications:
+
 
 
   # The following adds the Cupertino Icons font to your application.

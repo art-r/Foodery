@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:maps_launcher/maps_launcher.dart';
 
 class RouteCreation extends StatelessWidget {
+  String temptargetlocation;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,9 +24,20 @@ class RouteCreation extends StatelessWidget {
                 style: TextStyle(fontSize: 30),
               ),
               TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(), labelText: 'Target'),
-              ),
+                  onChanged: (String scr) {
+                    temptargetlocation = scr;
+                  },
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Colors.blueGrey[800], width: 2.5),
+                        borderRadius: BorderRadius.circular(10.0)),
+                    border: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Colors.grey[400], width: 2.5),
+                        borderRadius: BorderRadius.circular(10.0)),
+                    labelText: 'pick-up time',
+                  )),
               Text(
                 'Maximum number of reroutings:',
                 textAlign: TextAlign.center,
@@ -38,14 +51,30 @@ class RouteCreation extends StatelessWidget {
               ),
               TextField(
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Time')),
+                focusedBorder: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: Colors.blueGrey[800], width: 2.5),
+                    borderRadius: BorderRadius.circular(10.0)),
+                border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey[400], width: 2.5),
+                    borderRadius: BorderRadius.circular(10.0)),
+                labelText: 'pick-up time',
+              )),
               FlatButton.icon(
+                padding: EdgeInsets.fromLTRB(20.0, 8.0, 20.0, 8.0),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    side: BorderSide(color: Colors.grey[400], width: 2.5)),
                 onPressed: () {
-                  Navigator.of(context).maybePop();
+                  MapsLauncher.launchQuery(temptargetlocation);
+                  Future.delayed(const Duration(seconds: 5), () {
+                    Navigator.of(context).maybePop();
+                    Navigator.pushNamed(context, '/accept');
+                  });
                 },
                 icon: Icon(Icons.food_bank_outlined),
-                label: Text('finish'),
-                color: Colors.grey,
+                label: Text('Start'),
+                color: Colors.white,
                 splashColor: Colors.blueGrey,
               )
             ],
