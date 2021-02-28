@@ -1,4 +1,4 @@
-# **SMEAT - SMART EAT**
+# **Foodery - Food Delivery**
 ## *(Slogan)*
 ***
 ## Beschreibung
