@@ -8,9 +8,8 @@ class Accept extends StatelessWidget {
   TextStyle data = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
 
   String temppickuptime = testOrders[1].pickuptime ?? '20:15h';
-  String temppickuplocation =
-      testOrders[1].pickupLocation ?? 'Stuttgart, Rotebühlplatz';
-  String tempaddedtime = testOrders[1].addedtime ?? '10min';
+  String temppickuplocation = 'Stuttgart, Rotebühlplatz 69';
+  String tempaddedtime = testOrders[1].addedtime ?? '5min';
 
   @override
   Widget build(BuildContext context) {

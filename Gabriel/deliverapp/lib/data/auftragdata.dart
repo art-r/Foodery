@@ -13,7 +13,7 @@ List<Order> testOrders = [
   Order(
       deliveryman: 'Gabriel',
       ordernumber: '2',
-      pickupLocation: 'Stuttgart, Rotebühlplatz',
+      pickupLocation: '',
       pickuptime: '17:45h',
       gradientColor: GradientColor.sky),
   Order(
@@ -32,20 +32,21 @@ List<Order> testOrders = [
   ),
   Order(
       deliveryman: 'Artur',
-      ordernumber: '4',
+      ordernumber: '5',
       pickupLocation: 'DHBW Stuttgart',
       pickuptime: '19:30h',
       gradientColor: GradientColor.fire),
   Order(
       deliveryman: 'Luka',
-      ordernumber: '4',
+      ordernumber: '6',
       pickupLocation: 'DHBW Stuttgart',
       pickuptime: '19:30h',
       gradientColor: GradientColor.sky),
   Order(
       deliveryman: 'Luka',
-      ordernumber: '4',
+      ordernumber: '7',
       pickupLocation: 'DHBW Stuttgart',
       pickuptime: '19:30h',
       gradientColor: GradientColor.sky),
 ];
+List<Order> testOrders2 = [];
