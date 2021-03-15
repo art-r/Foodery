@@ -1,6 +1,8 @@
 # **Foodery**
 ## *Deliver food the smart and sustainable way*
 ***
+> *This project is no longer maintained*\
+> *Dieses Projekt wird nicht mehr weiterentwickelt*
 ## Beschreibung:
 ### ***Was?***
 **Foodery vernetzt Restaurants mit Personen, die mit dem Auto fahren und gleichzeitig etwas für die Umwelt tun möchten.**\
